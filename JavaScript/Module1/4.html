@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Task 4</title>
+</head>
+<body>
+  <script>
+    const studentName = prompt("Enter student's name:");
+    const draw = Math.floor(Math.random() * 4) + 1;
+
+    let house = "";
+
+    switch (draw) {
+      case 1:
+        house = "Gryffindor";
+        break;
+      case 2:
+        house = "Slytherin";
+        break;
+      case 3:
+        house = "Hufflepuff";
+        break;
+      case 4:
+        house = "Ravenclaw";
+        break;
+    }
+
+    document.body.innerHTML = `<p>${studentName}, you are ${house}.</p>`;
+  </script>
+</body>
+</html>

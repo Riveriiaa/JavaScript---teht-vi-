@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Task 5</title>
+</head>
+<body>
+  <script>
+    const year = Number(prompt("Enter a year:"));
+    let isLeapYear = false;
+
+    if (year % 400 === 0) {
+      isLeapYear = true;
+    } else if (year % 100 === 0) {
+      isLeapYear = false;
+    } else if (year % 4 === 0) {
+      isLeapYear = true;
+    }
+
+    if (isLeapYear) {
+      document.body.innerHTML = `<p>${year} is a leap year.</p>`;
+    } else {
+      document.body.innerHTML = `<p>${year} is not a leap year.</p>`;
+    }
+  </script>
+</body>
+</html>
