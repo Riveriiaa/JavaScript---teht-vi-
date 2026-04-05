@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    const participantCount = Number(prompt("Anna osallistujien lukumäärä:"));
+const participants = [];
+
+for (let i = 0; i < participantCount; i++) {
+  const name = prompt(`Anna osallistujan ${i + 1} nimi:`);
+  participants.push(name);
+}
+
+participants.sort((a, b) => a.localeCompare(b));
+
+const ol = document.createElement("ol");
+
+for (let i = 0; i < participants.length; i++) {
+  const li = document.createElement("li");
+  li.textContent = participants[i];
+  ol.appendChild(li);
+}
+
+document.body.appendChild(ol);
+</script>
+</body>
+</html>
