@@ -5,8 +5,25 @@
     <title>Title</title>
 </head>
 <body>
-<script>
+<ul id="dog-list"></ul>
 
+<script>
+  const dogs = [];
+
+  for (let i = 0; i < 6; i++) {
+    const name = prompt(`Enter name of dog ${i + 1}:`);
+    dogs.push(name);
+  }
+
+  dogs.sort().reverse();
+
+  const ul = document.getElementById('dog-list');
+
+  for (const dog of dogs) {
+    const li = document.createElement('li');
+    li.textContent = dog;
+    ul.appendChild(li);
+  }
 </script>
 </body>
 </html>
